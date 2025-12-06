@@ -1,1 +1,5 @@
-aa
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+uv run dbgpt start webserver --config configs/dbgpt-proxy-siliconflow.toml
+
+127.0.0.1:5670
