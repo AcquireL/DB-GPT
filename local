@@ -1,5 +1,12 @@
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+uv sync --all-packages \
+--extra "base" \
+--extra "proxy_openai" \
+--extra "rag" \
+--extra "storage_chromadb" \
+--extra "dbgpts"
+
 uv run dbgpt start webserver --config configs/dbgpt-proxy-siliconflow.toml
 
 127.0.0.1:5670
